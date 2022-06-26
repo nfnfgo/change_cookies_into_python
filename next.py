@@ -1,4 +1,7 @@
 #this file shoulb be replace and modified by main.py everytime it's runned
+from os.path import getsize
+
+
 
 cookies_info=THIS PART SHOULD BE REPLACED BY COOKIES_TEXT
 
@@ -15,3 +18,14 @@ for s_cookies_info in cookies_info:
 print('cookies_dict:',cookies_dict)
 with open('cookies_dict.txt','w') as f:
     f.write(str(cookies_dict))
+
+#construct the meta info
+cookies_len=len(cookies_dict)
+text_size=getsize('cookies.txt')
+dict_size=getsize('cookies_dict.txt')
+#construct the meta_text
+meta_text=''
+meta_text+='Cookies Amount: '+str(cookies_len)+'\n'
+meta_text+='Cookies File Size: '+str(text_size)+'\n'
+meta_text+='Cookies Dict File Size: '+str(dict_size)+'\n'
+print(meta_text)
