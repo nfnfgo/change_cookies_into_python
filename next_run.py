@@ -24,8 +24,8 @@ cookies_len=len(cookies_dict)
 text_size=getsize('cookies.txt')
 dict_size=getsize('cookies_dict.txt')
 #construct the meta_text
-meta_text=''
+meta_text='————————————————\n'
 meta_text+='Cookies Amount: '+str(cookies_len)+'\n'
-meta_text+='Cookies File Size: '+str(text_size)+'\n'
-meta_text+='Cookies Dict File Size: '+str(dict_size)+'\n'
+meta_text+='Cookies File Size: '+format(text_size/1024,'.2f')+'KB\n'
+meta_text+='Cookies Dict File Size: '+format(dict_size/1024,'.2f')+'KB\n'
 print(meta_text)
